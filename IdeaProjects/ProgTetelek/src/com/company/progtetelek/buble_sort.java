@@ -7,7 +7,6 @@ public class buble_sort {
                 bubleSort(items)) {
             System.out.println("Item a is: " + a);
         }
-
     }
 
     public static int [] bubleSort (int [] array) {
