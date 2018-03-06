@@ -1,17 +1,53 @@
 package com.company.javapractice;
 
+import java.io.*;
+
 public class humanClass {
 
     private String name;
     private int age;
     private boolean gender;
     public static int numOfCreation = 0;
+    private int money;
+    private int drunkLevel = 0;
+    private boolean inPub = false;
 
     /*
     public String getName() { return this.name; }
     public void setName() { this.name = name; }
     public void setAge() { if (age > 0) { this.age = age; } else { System.err.println("The age cannot be a negative number!"); } }
     */
+
+    public humanClass(String name, int age, boolean gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.money = money;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public int getDrunkLevel() {
+        return drunkLevel;
+    }
+
+    public void setDrunkLevel(int drunkLevel) {
+        this.drunkLevel = drunkLevel;
+    }
+
+    public boolean isInPub() {
+        return inPub;
+    }
+
+    public void setInPub(boolean inPub) {
+        this.inPub = inPub;
+    }
 
     public String getName() {
         return name;
@@ -46,15 +82,9 @@ public class humanClass {
 
     public humanClass() {
         name = "unnamed";
-        age = 00;
+        age = 0;
         gender = false;
         numOfCreation ++;
-    }
-
-    public humanClass(String name, int age, boolean gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
     }
 
     public String toString() {
