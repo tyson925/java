@@ -7,7 +7,19 @@ public class Security extends Human {
     public Security(String name, int age, boolean gender, int money, int drunkenness, boolean inPub, boolean works) {
         super(name, age, gender, money, drunkenness, inPub);
         this.works = works;
-        numOfWorkingSecurities++;
+    }
+
+    public void drink(Innkeeper innkeeper, Drink drink) {
+        if (isInPub() == true && isWorks() == true && drink.getAlcoholCont() == 0) {
+            setMoney(getMoney() - drink.getPrice());
+            innkeeper.setMoney(innkeeper.getMoney() + drink.getPrice());
+            innkeeper.setDirtyCup(innkeeper.getDirtyCup() + 1);
+            System.out.println("Yammy... That was a non-alcoholic " + drink.getName() + ".");
+        } else if (!isWorks()) {
+            drink(innkeeper, drink);
+        } else {
+            System.out.println("The security is not in the pub, or he is in, but cannot have alcoholic drink on duty!");
+        }
     }
 
     public static int getNumOfWorkingSecurities() {

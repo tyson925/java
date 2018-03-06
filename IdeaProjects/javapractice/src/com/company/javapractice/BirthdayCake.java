@@ -8,10 +8,7 @@ public class BirthdayCake extends Cake {
         this.numberOfCandles = numberOfCandles;
     }
 
-    @Override
-    public String toString() {
-        return "BirthdayCake{" +
-                "numberOfCandles=" + numberOfCandles +
-                '}';
+    public void info() {
+        System.out.println("This birthday cake tastes " + getTaste() + ", and has " + this.slice + " slices and has " + numberOfCandles + " candles." );
     }
 }

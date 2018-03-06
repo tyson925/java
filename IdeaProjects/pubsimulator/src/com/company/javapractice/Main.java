@@ -28,11 +28,6 @@ public class Main {
         Mixed mixed2 = new Mixed("Dirty Mind", whiskey, beer, pelinkovac);
         Mixed mixed3 = new Mixed("Nasty Shot", whiskey, beer, pelinkovac, cola);
 
-        ArrayList<String> mixDrinks = new ArrayList<String>();
-        mixDrinks.add(mixed1.getName());
-        mixDrinks.add(mixed2.getName());
-        mixDrinks.add(mixed3.getName());
-
         System.out.println(papilion);
         System.out.println(erdelyi);
         papilion.goPub();
@@ -46,8 +41,8 @@ public class Main {
 
         szabo.isOnDuty();
         szabo.goPub();
-        szabo.drinkSecurity(erdelyi, cola, szabo);
-        szabo.drinkSecurity(erdelyi, whiskey, szabo);
+        szabo.drink(erdelyi, cola);
+        szabo.drink(erdelyi, whiskey);
         System.out.println(szabo);
 
         ratgeber.goPub();

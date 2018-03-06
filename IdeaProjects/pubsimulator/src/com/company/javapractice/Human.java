@@ -48,19 +48,6 @@ public class Human {
         }
     }
 
-    public void drinkSecurity(Innkeeper innkeeper, Drink drink, Security security) {
-        if (inPub == true && security.isWorks() == true && drink.getAlcoholCont() == 0) {
-            this.money -= drink.getPrice();
-            innkeeper.setMoney(innkeeper.getMoney() + drink.getPrice());
-            innkeeper.setDirtyCup(innkeeper.getDirtyCup() + 1);
-            System.out.println("Yammy... That was a non-alcoholic " + drink.getName() + ".");
-            } else if (!security.isWorks()) {
-            security.drink(innkeeper, drink);
-        } else {
-            System.out.println("The security is not in the pub, or he is in, but cannot have alcoholic drink on duty!");
-        }
-    }
-
     public void banter(Human withWhom) {
         if (Security.getNumOfWorkingSecurities() > 0) {
             System.out.println(this.name + " wants to argue with " + withWhom.name + ", but the security guy solves the problem. ");

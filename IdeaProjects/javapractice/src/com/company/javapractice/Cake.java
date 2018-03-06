@@ -17,14 +17,6 @@ public class Cake {
         this.taste = taste;
     }
 
-    @Override
-    public String toString() {
-        return "Cake{" +
-                "slice=" + slice +
-                ", taste='" + taste + '\'' +
-                '}';
-    }
-
     public void info() {
         System.out.println("This cake tastes " + this.taste + ", and has " + this.slice + " slices.");
     }
