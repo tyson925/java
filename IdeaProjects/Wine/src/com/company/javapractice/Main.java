@@ -13,7 +13,7 @@ public class Main {
                 i += 2;
             } else {
                 Wine wine = new Wine(args[i], Integer.parseInt(args[i + 1]));
-                displayWine(wine);
+                displayWine(wine)   ;
                 i += 1;
             }
         }

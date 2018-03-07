@@ -36,5 +36,14 @@ public abstract class Animal {
     }
 
     public abstract String makeSound();
+
+    @Override
+    public String toString() {
+        return "The animal's " +
+                "specie is " + name +
+                ", its well fed level is " + wellFed +
+                ", and power is " + power +
+                '.';
+    }
 }
 
