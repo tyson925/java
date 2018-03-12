@@ -59,5 +59,8 @@ public class Main {
         System.out.println(szurkebarat);
         logOutWine(szurkebarat);
 
+        System.out.println(mixed1);
+        System.out.println(mixed2);
+        System.out.println(mixed3);
     }
 }

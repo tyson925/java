@@ -45,5 +45,17 @@ public class Main {
             String temp = strNew.nextToken();
             System.out.println(temp);
         }
+
+        // Replace all with regular expressions:
+        String phoneNumber = new String("The given string is a 0662 446-363 which makes me happy.");
+        String replaceString = phoneNumber.replaceAll("[\\d+\\s+\\d+\\-\\d+]{6,18}", " telephone ");
+        System.out.println(replaceString);
+
+
+        // Value of - Converts different types of values into string:
+        int value = 30;
+        String s1 = String.valueOf(value);
+        System.out.println(s1 + 40);
+
     }
 }

@@ -13,6 +13,31 @@ public class Horde {
         animals = new Animal[hordeNumber];
     }
 
+    public boolean acceptIntoHorde(Animal who) {
+        if (currentNumber < hordeNumber) {
+            if (animals[0] == null) {
+                animals[currentNumber] = who;
+                currentNumber++;
+                return true;
+            } else {
+                if (who.getClass().getSuperclass() == animals[0].getClass().getSuperclass()) {
+                    if (who.getClass().getInterfaces()[0] == animals[0].getClass().getInterfaces()[0]) {
+                        animals[currentNumber] = who;
+                        currentNumber++;
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+
+
+    /*
     public boolean acceptToHordeByPlaceOfLiving(Animal who) {
         if (animals[0] == null) {
             animals[0] = who;
@@ -42,7 +67,7 @@ public class Horde {
         }
         return false;
     }
-
+    */
 
     public Animal[] getAnimals() {
         return animals;

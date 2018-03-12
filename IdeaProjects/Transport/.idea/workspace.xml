@@ -129,9 +129,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,7 +162,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RecentsManager">
@@ -275,6 +275,67 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/human/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/human/Passenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/human/Inspector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="30" column="67" lean-forward="false" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+          <folding>
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">

@@ -10,6 +10,7 @@ public class Main {
         Chicken kfc = new Chicken("KFC chicken");
         Chicken slow = new Chicken("Slow cock");
 
+        Tiger white = new Tiger("White tiger");
         Tiger siberian = new Tiger("Siberian tiger");
         Whale blue = new Whale("Blue whale");
         Giraffe masai = new Giraffe("Masai giraffe");
@@ -22,7 +23,7 @@ public class Main {
         Herbivorous[] herbivorous = new Herbivorous[]{masai};
         Predator[] predator = new Predator[]{siberian, blue};
 
-        Horde gangEat = new Horde(10);
+        Horde myHorde = new Horde(10);
         Horde gangPlace = new Horde(10);
 
     for (int i = 0; i < animals.length; i++) {
@@ -34,15 +35,16 @@ public class Main {
         System.out.println(blue.makeSound());
         System.out.println(masai.makeSound());
 
-        gangEat.acceptToHordeByEatingHabits(siberian);
-        gangEat.acceptToHordeByEatingHabits(blue);
-        gangEat.acceptToHordeByEatingHabits(masai);
-        System.out.println(gangEat);
+        myHorde.acceptIntoHorde(white);
+        myHorde.acceptIntoHorde(siberian);
+        myHorde.acceptIntoHorde(blue);
+        myHorde.acceptIntoHorde(masai);
+        System.out.println(myHorde + "\n");
 
-        gangPlace.acceptToHordeByPlaceOfLiving(siberian);
-        gangPlace.acceptToHordeByPlaceOfLiving(blue);
-        gangPlace.acceptToHordeByPlaceOfLiving(masai);
-        System.out.println(gangPlace);
-    }
+        boolean isAquatic = blue instanceof AquaticAnimal;
+        boolean isContinental = siberian instanceof TerrestrialAnimal;
+        boolean isContinental2 = masai instanceof TerrestrialAnimal;
+
+       }
 }
 
