@@ -32,7 +32,7 @@ public class Bookshelf {
 
                 parameters = args[i + 1].split(",");
                 if(parameters.length == 5) {
-                    SchoolBook sb = new SchoolBook(parameters[0], parameters[1], parameters[2], Integer.parseInt(parameters[3]), parameters[4]);
+                    SchoolBook sb = new SchoolBook(parameters[0].replace("_", " "), parameters[1].replace("_", " "), parameters[2].replace("_", " "), Integer.parseInt(parameters[3]), parameters[4].replace("_", " "));
                     books.add(sb);
                     i++;
                 } else {
@@ -49,7 +49,7 @@ public class Bookshelf {
 
                 parameters = args[i + 1].split(",");
                 if (parameters.length == 5) {
-                    Novel no = new Novel(parameters[0], parameters[1], parameters[2], Integer.parseInt(parameters[3]), parameters[4]);
+                    Novel no = new Novel(parameters[0].replace("_", " "), parameters[1].replace("_", " "), parameters[2].replace("_", " "), Integer.parseInt(parameters[3]), parameters[4].replace("_", " "));
                     books.add(no);
                     i++;
                 } else {
