@@ -28,6 +28,15 @@ public class Stack {
         return stackArray[stackCounter + 1];
     }
 
+    public boolean search(String lookingFor) {
+        for (int i = 0; i < stackCounter; i++)
+        if (stackArray[i].equals(lookingFor)) {
+            return true;
+        }
+        return false;
+    }
+
+
     @Override
     public String toString() {
         for (int i = 0; i < stackArray.length; i++) {

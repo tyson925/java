@@ -19,6 +19,8 @@ public class Main {
         }
         System.out.println(st);
 
+        System.out.println(st.search("Oh"));
+        System.out.println(st.search("whereitis"));
 
         try {
             System.out.println(divide2(8, 0));
