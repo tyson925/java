@@ -115,6 +115,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -146,7 +147,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -261,6 +261,106 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Distributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Vending/EmptyVending.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Vending/ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Vending/DrinkVendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="98" lean-forward="false" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+          <folding>
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Distributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Vending/EmptyVending.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Vending/ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Vending/DrinkVendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="98" lean-forward="false" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+          <folding>
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/javapractice/Distributor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">

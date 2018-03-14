@@ -2,20 +2,30 @@
 1. Készíts programot, ami ha megadunk két nem negatív számot parancsori paraméterként, akkor a kisebbik négyzetgyökét kiírja a képernyőre!
 2. Készíts programot, amely bekér két számot és kiírja, hogy melyik a nagyobb illetve ha egyenlők, akkor azt.
 3. Készíts programot, amely 1-től 10-ig kiírja egymásmellé, vesszővel elválasztva a számok négyzetét!
+4. Készítsen egy olyan programot, amely a másodfokú egyenlet megoldó képlete alapján a valós számkörben megadja egy ax2+bx+c alakú másodfokú egyenlet gyökeit! A bemenő adatokat (a,b,c) a felhasználótól kérje be!
+5. Készíts programot, amely bekér egy számot, majd kiírja, hogy osztható-e 2-vel vagy 3-mal!
+6. Készíts programot, amely két adott sztringet megjelenít, az egyiket kisbetűs, a másikat nagybetűs formában!
+7. Készíts programot, ami bemut	atja a normál és a maradékos osztás közötti különbséget.
  */
 
 package com.company.javapractice;
 
+import java.io.*;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+
         System.out.println("Number of searches: " + search("ojnaenfonfownefonwefwrgpijj", 'o'));
         stringPract();
         smallerSquareRoot(args);
         compareNums();
         squareTen();
+        secondDegreeEquation();
+        dividableByTwoOrThree(6);
+        caseLowerUpper("GaMeOfThRoNeS");
+        divideNormalRest(7, 5);
     }
 
     public static void smallerSquareRoot(String[] args) {
@@ -119,6 +129,47 @@ public class Main {
             counter++;
         }
         return counter;
+    }
+
+    public static void secondDegreeEquation () {
+        Scanner a = new Scanner(System.in);
+        System.out.println("Enter the number 'a': ");
+        double num1 = a.nextDouble();
+        Scanner b = new Scanner(System.in);
+        System.out.println("Enter the number 'b': ");
+        double num2 = a.nextDouble();
+        Scanner c = new Scanner(System.in);
+        System.out.println("Enter the number 'c': ");
+        double num3 = a.nextDouble();
+        double x;
+        double y;
+        x = ((-num2) + Math.sqrt(Math.pow(num2, 2) - 4 * num1 * num3)) / (2 * num1);
+        y = ((-num2) - Math.sqrt(Math.pow(num2, 2) - 4 * num1 * num3)) / (2 * num1);
+        System.out.println("X: " + x);
+        System.out.println("Y: " + y);
+    }
+
+    public static void dividableByTwoOrThree(int a) {
+        if (a % 2 == 0) {
+            System.out.println(a + " can be divided by 2.");
+        } else {
+            System.out.println(a + " cannot be divided by 2.");
+        }
+        if (a % 3 == 0) {
+            System.out.println(a + " can be divided by 3.");
+        } else {
+            System.out.println(a + " cannot be divided by 3.");
+        }
+    }
+
+    public static void caseLowerUpper(String string) {
+        System.out.println(string.toLowerCase());
+        System.out.println(string.toUpperCase());
+    }
+
+    public static void divideNormalRest(int a, int b) {
+        double result = (a / b) - (a % b);
+        System.out.println("Difference of normal and rest divison: " + result);
     }
 }
 
