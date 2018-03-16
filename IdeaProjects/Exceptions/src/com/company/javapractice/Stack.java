@@ -1,3 +1,10 @@
+/*
+Hozz létre egy fix méret vermet egész számok tárolására (tömb segítségével) és valósítsd meg a push/pop mveleteket.
+Írj egy futtatható osztályt, mely a Main metódusban "push" vagy "pop" utasításokat vár a konzolról. Ha pop utasítást kap, hajtsa végre
+azt, és írja ki a konzolra a kivett elemet. Push utasítás esetén egy egész számnak kell következnie, ezt tegye be a verembe.
+Írj meg egy kivételosztályt, amit a fenti függvények (push/pop) akkor dobnak, ha a verem megtelt vagy üres.
+*/
+
 package com.company.javapractice;
 
 import java.util.*;

@@ -1,4 +1,6 @@
 /*
+0.Írj egy programot ami adott nehézségi gyorsulás (g=9,81 m/s^2) mellett a kilövési szög és a kezdõsebesség alapján kiszámolja, hogy hol lesz a kilõtt test a felhasználó által megadott idõ múlva.
+Számítsd ki azt is, hogy mikor és hol éri el a röppálya maximálismagasságát. Nem kell számolnod a légellenállással és feltételezd, hogy a terep sík.
 1. Készíts programot, ami ha megadunk két nem negatív számot parancsori paraméterként, akkor a kisebbik négyzetgyökét kiírja a képernyőre!
 2. Készíts programot, amely bekér két számot és kiírja, hogy melyik a nagyobb illetve ha egyenlők, akkor azt.
 3. Készíts programot, amely 1-től 10-ig kiírja egymásmellé, vesszővel elválasztva a számok négyzetét!
@@ -6,17 +8,19 @@
 5. Készíts programot, amely bekér egy számot, majd kiírja, hogy osztható-e 2-vel vagy 3-mal!
 6. Készíts programot, amely két adott sztringet megjelenít, az egyiket kisbetűs, a másikat nagybetűs formában!
 7. Készíts programot, ami bemut	atja a normál és a maradékos osztás közötti különbséget.
+8. Készíts programot, amely 10-től 20-ig generál két véletlen egész számot! Majd kiírja a két szám összegét, valamint szorzatát.
+9.  Készíts programot, ami generál két véletlen egész számot [0;100] intervallumban. A nagyobbik számból vonja ki a kisebbet, és írja ki a végeredményt.
+10. Készítsen egy olyan programot, amely véletlen számokkal tölt fel egy 100 elemű egész típusú tömböt, majd megkeresi és kiírja a konzolra a tömbben levő legnagyobb és legkisebb számot!
  */
-
 package com.company.javapractice;
 
-import java.io.*;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        projectileMotion(55, 30, 5.01);
         System.out.println("Number of searches: " + search("ojnaenfonfownefonwefwrgpijj", 'o'));
         stringPract();
         smallerSquareRoot(args);
@@ -26,6 +30,23 @@ public class Main {
         dividableByTwoOrThree(6);
         caseLowerUpper("GaMeOfThRoNeS");
         divideNormalRest(7, 5);
+        randomSumMult();
+        randomBigger();
+        hundredRandMaxMin();
+    }
+
+    public static void projectileMotion(int degree, double speed, double time) {
+        double angleInDegree = degree;
+        double angleInRadian = Math.toRadians(angleInDegree);
+        double g = 9.81;
+        double cos = Math.cos(angleInRadian);
+        double sin = Math.sin(angleInRadian);
+        double te = (time * sin) * g;
+        System.out.println("Time of raising: " + te + " second");
+        double h = (Math.pow(speed, 2) * Math.pow(sin, 2)) / (2 * g);
+        System.out.println("Highest point of projectile: " + h + " meters");
+        double d = speed * time * cos;
+        System.out.println("Traveled distance at a given time: " + d + " meters");
     }
 
     public static void smallerSquareRoot(String[] args) {
@@ -170,6 +191,44 @@ public class Main {
     public static void divideNormalRest(int a, int b) {
         double result = (a / b) - (a % b);
         System.out.println("Difference of normal and rest divison: " + result);
+    }
+
+    public static void randomSumMult() {
+        int a = (int)(Math.random() * 11 + 10);
+        int b = (int)(Math.random() * 11 + 10);
+        System.out.println("Summary of number " + a + " and " + b + ": " + (a + b));
+        System.out.println("Multiplication of number " + a + " and " + b + ": " + (a * b));
+    }
+
+    public static void randomBigger() {
+        int a = (int)(Math.random() * 101);
+        int b = (int)(Math.random() * 101);
+        if (a > b) {
+            System.out.println("A - B equals: " + (a - b));
+        } else {
+            System.out.println("B - A equals: " + (b - a));
+        }
+    }
+
+    public static void hundredRandMaxMin() {
+        Integer[] intArray = new Integer[100];
+        for (int i = 0; i < intArray.length; i++) {
+            int rand = (int)(Math.random() * 101);
+            intArray[i] = rand;
+            System.out.print(intArray[i] + ", ");
+        }
+        int min = 100;
+        int max = 0;
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] > max) {
+                max = intArray[i];
+            }
+            if (intArray[i] < min) {
+                min = intArray[i];
+            }
+            }
+        System.out.println("Smallest number: " + min);
+        System.out.println("Biggest number: " + max);
     }
 }
 
