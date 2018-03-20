@@ -9,11 +9,12 @@ import java.io.FileWriter;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Main main = new Main();
         main.readFile("/home/laszlobalint/IdeaProjects/ReadFromFile/src/com/company/javapractice/file.txt");
         main.writeContentToFile("file_2.txt", "Yolo");
         System.out.println(main.readFile("./file_2.txt"));
+        main.copyFile("./from.txt", "./to.txt");
     }
 
     public String readFile(String fileName) {
@@ -56,5 +57,25 @@ public class Main {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void copyFile(String from, String to) throws IOException {
+        BufferedReader br = null;
+        BufferedWriter bw = null;
+
+        br = new BufferedReader(new FileReader(from));
+        bw = new BufferedWriter(new FileWriter(to));
+
+        String line;
+        while ((line = br.readLine()) != null) {
+            bw.write(line + "\n");
+        }
+        bw.flush();
+        br.close();
+        bw.close();
+    }
+
+    public void copyFile2(String from, String to) {
+        writeContentToFile(to, readFile(from));
     }
 }
