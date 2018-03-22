@@ -110,21 +110,8 @@ public class OwnLinkedList {
 
     public void removeFirst() {
         if (!isEmpty()) {
-            actualNode = head.nextNode;
-            head = head.nextNode;
-        } else if (isLast()) {
-            actualNode = tail.previousNode;
-            tail = tail.previousNode;
-            tail.nextNode = null;
-        }
-    }
-
-    /*
-    public void removeFirst() {
-        if (!isEmpty()) {
             if (isFirst()) {
                 actualNode = head.nextNode;
-
                 head = head.nextNode;
             }
             if (head != null) {
@@ -134,32 +121,20 @@ public class OwnLinkedList {
                 tail = null;
             }
         }
-    } */
-
-    public void removeLast() {
-        if (!isEmpty()) {
-            actualNode = tail.previousNode;
-            tail = tail.previousNode;
-        } else if (isLast()) {
-            actualNode = tail.previousNode;
-            tail = tail.previousNode;
-            tail.nextNode = null;
-        }
     }
 
-    /*
     public void removeLast() {
         if (!isEmpty()) {
             if (tail == head) {
                 removeFirst();
             }
             if (isLast()) {
-                actual = tail.prev;
-                tail = tail.prev;
-                tail.next = null;
+                actualNode = tail.previousNode;
+                tail = tail.previousNode;
+                tail.nextNode = null;
             }
         }
-    } */
+    }
 
     public void removeActual() {
         if (!isEmpty()) {
@@ -180,12 +155,12 @@ public class OwnLinkedList {
     public boolean contains(int searchValue) {
         if (!isEmpty()) {
             actualNode = head;
-            while (!isLast()) {
+            do {
                 if (actualNode.value == searchValue) {
                     return true;
                 }
                 actualNode = actualNode.nextNode;
-            }
+            } while (!isLast());
         }
         return false;
     }
@@ -193,13 +168,13 @@ public class OwnLinkedList {
     public String toString() {
         if (!isEmpty()) {
             StringBuilder temp = new StringBuilder();
-
+            temp.append("[");
             actualNode = head;
             while (!isLast()) {
                 temp.append(actualNode.value).append(", ");
                 actualNode = actualNode.nextNode;
             }
-            temp.append(actualNode.value);
+            temp.append(actualNode.value).append("]");
             return temp.toString();
         }
         return "";
@@ -208,11 +183,10 @@ public class OwnLinkedList {
     public int getSize() {
         if (!isEmpty()) {
             actualNode = head;
-            while (!isLast()) {
+            do {
                 size++;
                 actualNode = actualNode.nextNode;
-            }
-            size++;
+            } while (!isLast());
             return size;
         }
         return 0;
