@@ -1,6 +1,8 @@
 package com.company.javapractice.vehicle.vhs;
 
-public class Video implements Rentable {
+import java.io.Serializable;
+
+public class Video implements Rentable, Serializable {
     private String titleMovie;
     private boolean isRented;
     private String rentableFor; // {"One-day", "two days", "Unlimited"};

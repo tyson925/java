@@ -16,7 +16,7 @@ public class VideoLibrary implements Rentable {
             videos.put(video.getTitleMovie(), video);
         }
         if (video.getClass() == EducationVideo.class) {
-            videos.put(video.getTitleMovie(), video);
+            educations.put(video.getTitleMovie(), video);
         }
     }
 
@@ -27,12 +27,17 @@ public class VideoLibrary implements Rentable {
             return videos.get(title);
         } else {
             try {
-                throw new NotFoundException();
+                throw new NotFoundException("Sorry, we do not have this movie!");
             } catch (NotFoundException e) {
                 e.printStackTrace();
             }
         }
         return null;
+    }
+
+    public void printMap() {
+        videos.forEach((key, value) -> System.out.println("Videos: " + key + "; " + value));
+        educations.forEach((key, value) -> System.out.println("Education videos: " + key + "; " + value));
     }
 
     @Override

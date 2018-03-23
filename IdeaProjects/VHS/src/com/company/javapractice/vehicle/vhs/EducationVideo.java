@@ -24,5 +24,10 @@ public final class EducationVideo extends Video {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Education videos: " + super.toString();
+    }
 }
 
