@@ -44,6 +44,6 @@ public class Car {
         return "The car " +
                 "has " + power + " HP" +
                 ", it's maximum speed is " + maxSpeed + " km/h, " +
-                ", and the type is " + type + ". ";
+                ", and the type is " + type + ". " + '\n';
     }
 }

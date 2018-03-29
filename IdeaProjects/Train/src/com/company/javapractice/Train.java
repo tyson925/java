@@ -4,6 +4,10 @@ import com.company.javapractice.Vehicle.Railway;
 import com.company.javapractice.Vehicle.GoodsTrain;
 import com.company.javapractice.Vehicle.LocalTrain;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Train {
     public static void main(String[] args) {
 
@@ -49,5 +53,11 @@ public class Train {
         }
         System.out.println("The fastest train: " + shortest);
         System.out.println("Time of travel: " + shortest.earliest() + " h");
+
+        System.out.println("Sorted in a better way:");
+        List<Railway> trainList = Arrays.asList(trains);
+        Collections.sort(trainList);
+        System.out.println(trainList);
+        System.out.println("The fastest train: " + trainList.get(0));
     }
 }

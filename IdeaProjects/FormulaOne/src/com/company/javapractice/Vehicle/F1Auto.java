@@ -1,6 +1,6 @@
 package com.company.javapractice.Vehicle;
 
-public final class F1Auto extends Car {
+public final class F1Auto extends Car implements Comparable<F1Auto>{
     private String driverName;
     private float setup;
 
@@ -34,11 +34,23 @@ public final class F1Auto extends Car {
 
     @Override
     public String toString() {
-        return "This Formula 1 car " +
+        return "Competitiveness: " + competitiveness() +
+                "This Formula 1 car " +
                 "has " + getPower() + " HP" +
                 ", it's maximum speed is " + getMaxSpeed() + " km/h" +
                 ", and the type is " + getType() + ". " +
                 "The driver's name is " + driverName +
-                ". ";
+                ". " + '\n';
+    }
+
+    @Override
+    public int compareTo(F1Auto car) {
+        if (this.competitiveness() == car.competitiveness()) {
+            return 0;
+        } else if (this.competitiveness() > car.competitiveness()) {
+            return -1;
+        } else {
+            return 1;
+        }
     }
 }

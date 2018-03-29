@@ -3,6 +3,10 @@ package com.company.javapractice;
 import com.company.javapractice.Vehicle.Car;
 import com.company.javapractice.Vehicle.F1Auto;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Race {
 
     public static void main(String[] args) {
@@ -13,9 +17,12 @@ public class Race {
     F1Auto hamilton = new F1Auto(920, 380, "Mercedes", "Hamilton", 0.85f);
     F1Auto stroll = new F1Auto(920, 370, "Williams", "Stroll", 0.8f);
 
-    Car[] cars = {alonso, verstappen, vettel, hamilton, stroll};
-
-    sortCars(cars);
+    F1Auto[] cars = {alonso, verstappen, vettel, hamilton, stroll};
+    List<F1Auto> carList = Arrays.asList(cars);
+    Collections.sort(carList);
+    System.out.println("Sorted in a better way:");
+    System.out.println(carList);
+    //sortCars(cars);
     printCar(cars);
 }
 

@@ -1,6 +1,6 @@
 package com.company.javapractice.Vehicle;
 
-public class Railway {
+public class Railway implements Comparable<Railway> {
     private String departureStation;
     private String destinationStation;
     private float distance;
@@ -16,7 +16,7 @@ public class Railway {
     public Railway() {
     }
 
-    public double earliest () {
+    public double earliest() {
         return this.getDistance() / this.getAverageSpeed();
     }
 
@@ -58,7 +58,18 @@ public class Railway {
                 "Departure: " + departureStation +
                 ", Destination: " + destinationStation +
                 " (distance: " + distance + " km)" +
-                ", average speed: " + averageSpeed + " km/h.";
+                ", average speed: " + averageSpeed + " km/h." + '\n';
+    }
+
+    @Override
+    public int compareTo(Railway railway) {
+        if (this.earliest() == railway.earliest()) {
+            return 0;
+        } else if (this.earliest() > railway.earliest()) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }
 

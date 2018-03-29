@@ -3,16 +3,16 @@ package com.company.javapractice.machine;
 import com.company.javapractice.machine.Machine.HydraulicShovel;
 import com.company.javapractice.machine.Machine.Lorry;
 import com.company.javapractice.machine.Machine.LorryAutoStat;
+import com.company.javapractice.machine.Machine.TransloadWrapper;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
         LorryAutoStat stat = new LorryAutoStat();
-        HashMap <HydraulicShovel, Lorry> vehicle = new HashMap<>();
+        HashMap <HydraulicShovel, Lorry> vehicle = new HashMap <>();
         BufferedReader reader = null;
         try {
             reader = new BufferedReader(new FileReader("./src/HydarulicShovel.txt"));
@@ -62,6 +62,13 @@ public class Main {
         deserialize("./src/vehicles.ser");
         System.out.println();
         System.out.println("Trucks by carrying capacity: " + stat.getPower());
+
+        List <TransloadWrapper> list = new ArrayList <>();
+        for (HydraulicShovel key : vehicle.keySet()) {
+            list.add(new TransloadWrapper(key, vehicle.get(key), key.transloading(600, 200, vehicle.get(key))));
+        }
+        Collections.sort(list);
+        System.out.println("Fastest transload:\n" + list.get(0));
     }
 
     public static void serialize(HashMap map) {
